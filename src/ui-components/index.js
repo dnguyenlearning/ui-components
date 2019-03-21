@@ -4,6 +4,7 @@ import ModalResponse from "./modals/response";
 import Notification from "./notification"
 import Tag from "./tag";
 import UploadZone from "./upload-zone";
+import InputText from "./form-fields/input-field";
 
 export {
     QWButton,
@@ -11,5 +12,6 @@ export {
     ModalResponse,
     Notification,
     Tag,
-    UploadZone
+    UploadZone,
+    InputText
 }

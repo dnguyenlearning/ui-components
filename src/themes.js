@@ -56,6 +56,9 @@ const defaultStyleOptions = {
 
             upload_zone: 14,
 
+            input_text: 14,
+            input_helper_text: 14,
+            input_placeholder: 14,
 
             login_input: 22,
             login_label: 13,
@@ -77,7 +80,6 @@ const defaultStyleOptions = {
             information_body_highlight: "#672165",
             information_header: "#808184",
             information_body: "#808184",
-
             upload_zone: "#a1adcd"
         },
         letterSpacing: {

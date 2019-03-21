@@ -13,7 +13,8 @@ import {QWButton,
     ModalResponse,
     Notification,
     Tag,
-    UploadZone
+    UploadZone,
+    InputText
 } from "./ui-components";
 
 function App({actions, selectedTheme}) {
@@ -56,7 +57,7 @@ function App({actions, selectedTheme}) {
 
 
     return (
-        <Grid container className="App">
+        <Grid container className="App" style={{marginBottom: 50}}>
             <MuiThemeProvider theme={theme}>
                 <Grid container spacing={16} direction={"column"}>
                     <Grid item container spacing={8}>
@@ -216,6 +217,33 @@ function App({actions, selectedTheme}) {
                         <UploadZone
                             handleAcceptedFile={(acceptedFiles)=> console.log(acceptedFiles)}
                         />
+                    </Grid>
+
+                    <Grid item>
+                        <h2>Input Text</h2>
+                        <Grid item>
+                            <h4>Normal Input</h4>
+                            <InputText
+                                placeholder={"placeholder"}
+                                handleChange={(value)=> console.log('value', value)}
+                            />
+                        </Grid>
+                        <Grid item>
+                            <h4>Error Input</h4>
+                            <InputText
+                                error={true}
+                                placeholder={"placeholder"}
+                                handleChange={(value)=> console.log('value', value)}
+                            />
+                        </Grid>
+                        <Grid item>
+                            <h4>Success Input</h4>
+                            <InputText
+                                success={true}
+                                placeholder={"placeholder"}
+                                handleChange={(value)=> console.log('value', value)}
+                            />
+                        </Grid>
                     </Grid>
 
                     <ModalConfirm

@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1b430f2d-8447-473d-a027-69c627b8a937" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui-components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui-components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui-components/upload-zone/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui-components/upload-zone/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,28 +16,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5752322">
+    <splitter split-orientation="horizontal" split-proportion="0.63151366">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="215" column="32" selection-start-line="215" selection-start-column="32" selection-end-line="215" selection-end-column="32" />
+                <state relative-caret-position="382">
+                  <caret line="266" column="31" lean-forward="true" selection-start-line="266" selection-start-column="31" selection-end-line="266" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
-                    <element signature="e#1138#1220#0" />
-                    <element signature="e#1272#1350#0" />
-                    <element signature="e#1356#1403#0" />
-                    <element signature="e#1608#1694#0" />
-                    <element signature="e#808#2177#0" />
-                    <element signature="e#1907#2568#0" />
-                    <element signature="e#4017#4290#0" />
-                    <element signature="e#6730#6794#0" />
-                    <element signature="e#8415#9131#0" />
-                    <element signature="e#5060#5162#0" />
-                    <element signature="e#5286#5392#0" />
-                    <element signature="e#6837#7026#0" />
+                    <element signature="e#2001#3121#0" />
+                    <element signature="e#3142#4906#0" />
+                    <element signature="e#4927#6634#0" />
+                    <element signature="e#6656#8409#0" />
+                    <element signature="e#8431#9502#0" />
+                    <element signature="e#9524#9765#0" />
+                    <element signature="e#9834#9898#0" />
+                    <element signature="e#9787#9992#0" />
+                    <element signature="e#10013#10284#0" />
+                    <element signature="e#10305#10557#0" />
                   </folding>
                 </state>
               </provider>
@@ -42,7 +44,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/notification/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
+                <state relative-caret-position="935">
                   <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -54,8 +56,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/upload-zone/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+                <state relative-caret-position="382">
+                  <caret line="38" selection-start-line="38" selection-end-line="38" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -63,15 +65,22 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="314">
+                  <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/tag/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="634">
+                <state relative-caret-position="629">
                   <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -83,7 +92,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/modals/response/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="243">
+                <state relative-caret-position="323">
                   <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -92,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="221">
-                  <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+                  <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -109,7 +118,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/with-props-styles/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
+                <state relative-caret-position="374">
                   <caret line="23" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="e#0#52#0" expanded="true" />
@@ -121,8 +130,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ui-components/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -133,12 +142,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/themes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="80" column="23" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="23" />
+                <state relative-caret-position="612">
+                  <caret line="60" column="29" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -153,6 +162,11 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>underline</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,13 +183,13 @@
         <option value="$PROJECT_DIR$/src/ui-components/tags/index.js" />
         <option value="$PROJECT_DIR$/src/ui-components/tag/index.js" />
         <option value="$PROJECT_DIR$/src/ui-components/notification/index.js" />
-        <option value="$PROJECT_DIR$/src/ui-components/index.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/themes.js" />
-        <option value="$PROJECT_DIR$/src/ui-components/upload-zone/index.js" />
-        <option value="$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/ui-components/upload-zone/index.js" />
+        <option value="$PROJECT_DIR$/src/ui-components/index.js" />
+        <option value="$PROJECT_DIR$/src/themes.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js" />
       </list>
     </option>
   </component>
@@ -193,8 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,16 +230,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ui-components" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="test-multiple-theme-redux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-multiple-theme-redux" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-components" type="462c0819:PsiDirectoryNode" />
+              <item name="form-fields" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-multiple-theme-redux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-multiple-theme-redux" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ui-components" type="462c0819:PsiDirectoryNode" />
+              <item name="form-fields" type="462c0819:PsiDirectoryNode" />
+              <item name="input-field" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553166287309" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553180049920" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -264,18 +293,19 @@
       <option name="presentableId" value="Default" />
       <updated>1553137445310</updated>
       <workItem from="1553137446869" duration="3892000" />
-      <workItem from="1553141432995" duration="17074000" />
+      <workItem from="1553141432995" duration="17910000" />
+      <workItem from="1553170941239" duration="6806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20966000" />
+    <option name="totallyTimeSpent" value="28608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-1088" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14072494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -292,7 +322,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32047158" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32047158" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -360,20 +390,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui-components/with-props-styles/index.js">
+    <entry file="file://$PROJECT_DIR$/src/ui-components/notification/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui-components/modals/response/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="935">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -382,7 +402,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui-components/tag/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
+        <state relative-caret-position="629">
           <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -390,75 +410,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui-components/notification/index.js">
+    <entry file="file://$PROJECT_DIR$/src/ui-components/modals/response/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+        <state relative-caret-position="323">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui-components/index.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui-components/with-props-styles/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="215" column="32" selection-start-line="215" selection-start-column="32" selection-end-line="215" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#1138#1220#0" />
-            <element signature="e#1272#1350#0" />
-            <element signature="e#1356#1403#0" />
-            <element signature="e#1608#1694#0" />
-            <element signature="e#808#2177#0" />
-            <element signature="e#1907#2568#0" />
-            <element signature="e#4017#4290#0" />
-            <element signature="e#6730#6794#0" />
-            <element signature="e#8415#9131#0" />
-            <element signature="e#5060#5162#0" />
-            <element signature="e#5286#5392#0" />
-            <element signature="e#6837#7026#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/themes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="23" />
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui-components/upload-zone/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="382">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/ui-components/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/themes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="266" column="31" lean-forward="true" selection-start-line="266" selection-start-column="31" selection-end-line="266" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#2001#3121#0" />
+            <element signature="e#3142#4906#0" />
+            <element signature="e#4927#6634#0" />
+            <element signature="e#6656#8409#0" />
+            <element signature="e#8431#9502#0" />
+            <element signature="e#9524#9765#0" />
+            <element signature="e#9834#9898#0" />
+            <element signature="e#9787#9992#0" />
+            <element signature="e#10013#10284#0" />
+            <element signature="e#10305#10557#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui-components/form-fields/input-field/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

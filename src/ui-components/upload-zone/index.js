@@ -1,12 +1,13 @@
 import React, {useCallback} from 'react';
 import {useDropzone} from 'react-dropzone';
-import Grid from "@material-ui/core/Grid";
 import withPropsStyles from "../with-props-styles";
 import PropTypes from "prop-types"
 import QWButton from "../button"
 
-const styles = (props, theme) =>({
+const styles = (props, theme) => ({
     root: {
+        display: "flex",
+        alignItems: "center",
         maxHeight: 42,
         minHeight: 42,
         maxWidth: 550,
@@ -23,9 +24,7 @@ const styles = (props, theme) =>({
         marginRight: 10,
         borderRadius: 2
     },
-    browse:{
-
-    }
+    browse: {}
 });
 
 function UploadZone({handleAcceptedFile, classes}) {
@@ -35,16 +34,18 @@ function UploadZone({handleAcceptedFile, classes}) {
 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({
         onDrop,
-        accept: 'image/jpeg, image/png'
+        accept: 'image/jpeg, image/png',
     });
 
     return (
-        <Grid container className={classes.root} {...getRootProps()} alignItems={"center"}>
+        <div
+            className={classes.root}
+            {...getRootProps()}>
             <input {...getInputProps()} />
-            <Grid item className={classes.input}>
-                Choose a File
-            </Grid>
-            <Grid item className={classes.browse}>
+            <div className={classes.input}>
+                {isDragActive ? "Drop Your Items" : "Choose a File"}
+            </div>
+            <div className={classes.browse}>
                 <QWButton
                     color={"primary"}
                     variant={"contained"}
@@ -52,8 +53,8 @@ function UploadZone({handleAcceptedFile, classes}) {
                 >
                     Browse
                 </QWButton>
-            </Grid>
-        </Grid>
+            </div>
+        </div>
     )
 }
 
