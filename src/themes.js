@@ -86,7 +86,8 @@ const defaultStyleOptions = {
     boxShadow: {
         table_item_hover: "0 13px 23px -5px rgba(157, 142, 230, 0.34)",
         notification: "0 2px 4px 0 rgba(0, 0, 0, 0.1)",
-        tag: "0 5px 16px 0 rgba(226, 230, 245, 0.8)"
+        tag: "0 5px 16px 0 rgba(226, 230, 245, 0.8)",
+        app_bar: "0 2px 40px 1px rgba(221, 229, 252, 0.5)"
     },
     gradient: {
 

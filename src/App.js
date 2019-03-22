@@ -21,7 +21,10 @@ import {QWButton,
     Tag,
     UploadZone,
     InputText,
-    MenuItem
+    MenuItem,
+    AppBar,
+    Tabs,
+    Tab
 } from "./ui-components";
 
 function App({actions, selectedTheme}) {
@@ -58,6 +61,12 @@ function App({actions, selectedTheme}) {
         setResponseType("");
         setOpenModalSuccessResponse(false);
     };
+
+    /**
+     * Tabs state
+     */
+
+    const [tabIndex, setTabIndex] = useState(0);
 
 
     const theme = createTheme(selectedTheme);
@@ -296,6 +305,36 @@ function App({actions, selectedTheme}) {
                                 />
                             </Grid>
                         </Grid>
+                    </Grid>
+
+                    <Grid item>
+                        <h2>AppBar</h2>
+                        <AppBar />
+                    </Grid>
+
+                    <Grid item>
+                        <h2>Tabs</h2>
+                        <Tabs
+                            value={tabIndex}
+                            onChange = {(e,v) => setTabIndex(v)}
+                        >
+                            <Tab
+                                label={"Tab 1"}
+                            />
+                            <Tab
+                                label={"Tab 2"}
+                            />
+                            <Tab
+                                label={"Tab 3"}
+                            />
+                            <Tab
+                                label={"Tab 4"}
+                            />
+                        </Tabs>
+                        {tabIndex === 0 && "Tab 1 Content"}
+                        {tabIndex === 1 && "Tab 2 Content"}
+                        {tabIndex === 2 && "Tab 3 Content"}
+                        {tabIndex === 3 && "Tab 4 Content"}
                     </Grid>
                     <ModalConfirm
                         open={openModalConfirm}

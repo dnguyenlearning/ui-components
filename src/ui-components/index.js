@@ -6,6 +6,9 @@ import Tag from "./tag";
 import UploadZone from "./upload-zone";
 import InputText from "./form-fields/input-field";
 import MenuItem from "./menu/item";
+import AppBar from "./app-bar";
+import Tabs from "./tabs";
+import Tab from "./tabs/tab";
 
 export {
     QWButton,
@@ -15,5 +18,8 @@ export {
     Tag,
     UploadZone,
     InputText,
-    MenuItem
+    MenuItem,
+    AppBar,
+    Tab,
+    Tabs
 }
