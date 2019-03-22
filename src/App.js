@@ -8,13 +8,20 @@ import blue from '@material-ui/core/colors/blue';
 import Grid from "@material-ui/core/Grid";
 import {createTheme} from "./create-theme";
 import AddIcon from "@material-ui/icons/Add";
+import DashboardIcon from "assets/icons/dashboard.png";
+import SurveyIcon from "assets/icons/survey.png";
+import UsersIcon from "assets/icons/users.png";
+import PosIcon from "assets/icons/pos.png";
+import ManageIcon from "assets/icons/ic_manage.png";
+
 import {QWButton,
     ModalConfirm,
     ModalResponse,
     Notification,
     Tag,
     UploadZone,
-    InputText
+    InputText,
+    MenuItem
 } from "./ui-components";
 
 function App({actions, selectedTheme}) {
@@ -246,6 +253,50 @@ function App({actions, selectedTheme}) {
                         </Grid>
                     </Grid>
 
+                    <Grid item>
+                        <h2>Menu List</h2>
+                        <Grid item container direction={"row"} spacing={8}>
+                            <Grid item>
+                                <MenuItem
+                                    icon={DashboardIcon}
+                                    label={"Dashboard"}
+                                    to={"/dashboard/default"}
+                                />
+                            </Grid>
+
+                            <Grid item>
+                                <MenuItem
+                                    icon={SurveyIcon}
+                                    label={"Survey Campaign"}
+                                    to={"/surveys/default"}
+                                />
+                            </Grid>
+
+                            <Grid item>
+                                <MenuItem
+                                    icon={PosIcon}
+                                    label={"POS"}
+                                    to={"/stores/default"}
+                                />
+                            </Grid>
+
+                            <Grid item>
+                                <MenuItem
+                                    icon={UsersIcon}
+                                    label={"Users"}
+                                    to={"/users/default"}
+                                />
+                            </Grid>
+
+                            <Grid item>
+                                <MenuItem
+                                    icon={ManageIcon}
+                                    label={"Manage Data"}
+                                    to={"/manage/default"}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
                     <ModalConfirm
                         open={openModalConfirm}
                         handleClose={closeModalConfirmHandler}

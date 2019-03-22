@@ -2,11 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import withPropsStyles from "../with-props-styles";
-import InfoIcon from "@material-ui/icons/Info";
 import CloseIcon from "@material-ui/icons/Close";
-import WarningIcon from "@material-ui/icons/Warning";
-import AgreeIcon from "@material-ui/icons/Check"
-
+import LikeIcon from "assets/icons/like.png";
+import WarningIcon from "assets/icons/warning.png";
+import InfoIcon from "assets/icons/info.png";
 
 function getIconStyle(type, theme) {
     switch (type) {
@@ -57,6 +56,10 @@ const styles = (props, theme) => ({
         alignItems: "center",
         width: 50,
         height: 50,
+        "& img": {
+            maxWidth: "100%",
+            height: 30
+        }
     },
     message: {
         paddingLeft: 10,
@@ -74,17 +77,17 @@ const styles = (props, theme) => ({
 function getIcon(type) {
     switch (type) {
         case "primary":
-            return <AgreeIcon />;
+            return <img src={LikeIcon} alt="agree icon"/>;
         case "success":
-            return <AgreeIcon />;
+            return <img src={LikeIcon} alt="agree icon"/>;
         case "info":
-            return <InfoIcon/>;
+            return <img src={InfoIcon} alt={"Info icon"} />;
         case "warning":
-            return <WarningIcon/>;
+            return <img src={WarningIcon} alt="agree icon"/>;
         case "danger":
-            return <WarningIcon/>;
+            return <img src={WarningIcon} alt="agree icon"/>;
         default:
-            return <AgreeIcon />
+            return <img src={LikeIcon} alt="agree icon"/>
     }
 }
 

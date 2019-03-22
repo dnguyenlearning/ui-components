@@ -60,18 +60,7 @@ const defaultStyleOptions = {
             input_helper_text: 14,
             input_placeholder: 14,
 
-            login_input: 22,
-            login_label: 13,
-
-            navigation_active: 22,
-
-            store_detail_header: 17,
-            store_detail_sub_header: 15,
-            store_detail_body: 15,
-
-            information_body_highlight: 14,
-            information_header: 14,
-            information_body: 14
+            menu_item_label: 12,
 
         },
         color: {

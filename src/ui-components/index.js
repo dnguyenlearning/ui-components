@@ -5,6 +5,7 @@ import Notification from "./notification"
 import Tag from "./tag";
 import UploadZone from "./upload-zone";
 import InputText from "./form-fields/input-field";
+import MenuItem from "./menu/item";
 
 export {
     QWButton,
@@ -13,5 +14,6 @@ export {
     Notification,
     Tag,
     UploadZone,
-    InputText
+    InputText,
+    MenuItem
 }
