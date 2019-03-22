@@ -14,7 +14,8 @@ import UsersIcon from "assets/icons/users.png";
 import PosIcon from "assets/icons/pos.png";
 import ManageIcon from "assets/icons/ic_manage.png";
 
-import {QWButton,
+import {
+    QWButton,
     ModalConfirm,
     ModalResponse,
     Notification,
@@ -24,7 +25,8 @@ import {QWButton,
     MenuItem,
     AppBar,
     Tabs,
-    Tab
+    Tab,
+    Table
 } from "./ui-components";
 
 function App({actions, selectedTheme}) {
@@ -336,6 +338,14 @@ function App({actions, selectedTheme}) {
                         {tabIndex === 2 && "Tab 3 Content"}
                         {tabIndex === 3 && "Tab 4 Content"}
                     </Grid>
+
+                    <Grid item>
+                        <h2>Table</h2>
+                        <Table
+
+                        />
+                    </Grid>
+
                     <ModalConfirm
                         open={openModalConfirm}
                         handleClose={closeModalConfirmHandler}

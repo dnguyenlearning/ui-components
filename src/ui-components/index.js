@@ -9,6 +9,7 @@ import MenuItem from "./menu/item";
 import AppBar from "./app-bar";
 import Tabs from "./tabs";
 import Tab from "./tabs/tab";
+import Table from "./table";
 
 export {
     QWButton,
@@ -21,5 +22,6 @@ export {
     MenuItem,
     AppBar,
     Tab,
-    Tabs
+    Tabs,
+    Table
 }

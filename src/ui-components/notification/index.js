@@ -42,6 +42,35 @@ function getIconStyle(type, theme) {
     }
 }
 
+function getTextStyle(type, theme) {
+    switch (type) {
+        case "primary":
+            return {
+                color: theme.palette.primary.main
+            };
+        case "success":
+            return {
+                color: theme.colors.green,
+            };
+        case "info":
+            return {
+                color: theme.colors.blue,
+            };
+        case "warning":
+            return {
+                color: theme.colors.orange,
+            };
+        case "danger":
+            return {
+                color: theme.colors.red,
+            };
+        default:
+            return {
+                color: theme.palette.primary.main,
+            };
+    }
+}
+
 const styles = (props, theme) => ({
     root: {
         minHeight: 50,
@@ -62,8 +91,9 @@ const styles = (props, theme) => ({
         }
     },
     message: {
+        ...getTextStyle(props.type, theme),
         paddingLeft: 10,
-        fontSize: theme.text.size.notification_message
+        fontSize: theme.text.size.notification_message,
     },
     closeButton: {
         position: "absolute",
