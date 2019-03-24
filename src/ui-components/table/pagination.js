@@ -31,7 +31,7 @@ const styles = theme => ({
     }
 });
 
-function Pagination({classes, page, onPageChange, pages, pageSizeOptions, pageSize, onPageSizeChange}) {
+function Pagination({classes, page, onPageChange, pages, pageSizeOptions, pageSize, onPageSizeChange, onFilteredChange}) {
 
     const activePage = page + 1;
 
@@ -45,14 +45,10 @@ function Pagination({classes, page, onPageChange, pages, pageSizeOptions, pageSi
         onPageChange(page - 1);
     };
 
-    const handleSearch = (value) => {
-    };
-
-
     return (
         <Grid className={classes.pagination}>
             <Grid item className={classes.search}>
-                <SearchBar />
+                <SearchBar handleSearch={(value) => onFilteredChange(value)} />
             </Grid>
             <Grid item className={classes.changePage}>
                 <ChangePage

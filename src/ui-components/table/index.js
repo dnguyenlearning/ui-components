@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useRef} from "react";
 import ReactTable from "react-table";
 import withPropsStyles from "../with-props-styles";
 import 'react-table/react-table.css';
@@ -7,6 +7,7 @@ import axios from "axios";
 import Pagination from "./pagination";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import {makeData} from "./make-data-dummy";
 
@@ -27,7 +28,7 @@ const styles = (props, theme) => ({
                 maxHeight: 60,
                 minHeight: 60
             },
-            "& .rt-tr-group":{
+            "& .rt-tr-group": {
                 boxShadow: theme.boxShadow.table_header,
                 maxHeight: 60,
                 minHeight: 60,
@@ -51,11 +52,12 @@ const styles = (props, theme) => ({
     }
 });
 
-const requestData = async ({fetchApi, pageSize, page, sorted, filtered, filterOptions}) => {
+const requestData = async ({fetchApi, pageSize, page, sorted, filtered, globalFiltered, filterOptions}) => {
     console.log("pageSize", pageSize);
     console.log("page", page);
     console.log("sorted", sorted);
     console.log("filtered", filtered);
+    console.log("globalFiltered", globalFiltered);
 
     const response = await axios(fetchApi);
     console.log('response', response)
@@ -106,8 +108,19 @@ function Table({fetchApi, columns, defaultPageSize = 5, filterOptions, classes})
     const [pages, setPages] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const timeoutRef = useRef(0);
+
+    const [pageSize, setPageSize] = useState(defaultPageSize);
+    const [page, setPage] = useState(0);
+    const [sorted, setSorted] = useState([]);
+    const [filtered, setFiltered] = useState([]);
+
     const fetchData = ({page, pageSize, sorted, filtered}, instance) => {
         setLoading(true);
+        setPage(page);
+        setPageSize(pageSize);
+        setSorted(sorted);
+        setFiltered(filtered);
         requestData({
             page,
             pageSize,
@@ -116,22 +129,43 @@ function Table({fetchApi, columns, defaultPageSize = 5, filterOptions, classes})
             fetchApi,
             filterOptions
         }).then(res => {
-            // Now just get the rows of data to your React Table (and update anything else like total pages or loading)
             setData(res.rows);
             setPages(res.pages);
             setLoading(false)
         });
     };
 
+    const onFilteredChange = (globalFiltered) => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+            setLoading(true);
+            requestData({
+                page,
+                pageSize,
+                sorted,
+                filtered,
+                fetchApi,
+                globalFiltered,
+                filterOptions
+            }).then(res => {
+                setData(res.rows);
+                setPages(res.pages);
+                setLoading(false)
+            });
+        }, 500)
+
+    };
+
     return <Grid container className={classes.root}>
         <ReactTable
             PaginationComponent={Pagination}
-            manual // Forces table not to paginate or sort automatically, so we can handle it server-side
+            onFilteredChange={onFilteredChange}
+            manual
             data={data}
-            pages={pages} // Display the total number of pages
-            loading={loading} // Display the loading overlay when we need it
-            loadingText={<span>Loading Icon</span>}
-            onFetchData={fetchData} // Request new data when things change
+            pages={pages}
+            loading={loading}
+            loadingText={<CircularProgress color={"primary"} />}
+            onFetchData={fetchData}
             defaultPageSize={defaultPageSize}
             columns={columns}
         />

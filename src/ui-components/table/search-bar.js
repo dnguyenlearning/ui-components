@@ -37,7 +37,6 @@ const styles = theme =>({
 });
 
 function SearchBar({handleSearch, classes, ...other}){
-    console.log('other', other)
     return <Grid className={classes.root} spacing={8} container alignItems={"center"}>
         <Grid item>
             <SearchIcon />
