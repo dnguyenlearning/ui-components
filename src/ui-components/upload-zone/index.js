@@ -11,10 +11,10 @@ const styles = (props, theme) => ({
         maxHeight: 42,
         minHeight: 42,
         maxWidth: 550,
-        cursor: "pointer"
+        cursor: "pointer",
     },
     input: {
-        background: "#f5f6fa",
+        background: theme.palette.background.paper,
         color: theme.text.color.upload_zone,
         flex: 1,
         minHeight: 42,
