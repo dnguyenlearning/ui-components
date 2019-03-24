@@ -2,70 +2,62 @@ import React, {useState, useEffect} from "react";
 import ReactTable from "react-table";
 import withPropsStyles from "../with-props-styles";
 import 'react-table/react-table.css';
-import namor from "namor";
 import * as _ from "lodash";
 import axios from "axios";
-import Pagination from "./pagination"
-const styles = (props, theme) => ({});
+import Pagination from "./pagination";
+import PropTypes from "prop-types";
+import Grid from "@material-ui/core/Grid";
 
-const columns = [
-    {
-        Header: "First Name",
-        accessor: "firstName"
-    },
-    {
-        Header: "Last Name",
-        id: "lastName",
-    },
-    {
-        Header: "Age",
-        accessor: "age"
-    }
-];
-
-const range = len => {
-    const arr = [];
-    for (let i = 0; i < len; i++) {
-        arr.push(i);
-    }
-    return arr;
-};
-
-const newPerson = () => {
-    const statusChance = Math.random();
-    return {
-        firstName: namor.generate({words: 1, numbers: 0}),
-        lastName: namor.generate({words: 1, numbers: 0}),
-        age: Math.floor(Math.random() * 30),
-        visits: Math.floor(Math.random() * 100),
-        progress: Math.floor(Math.random() * 100),
-        status:
-            statusChance > 0.66
-                ? "relationship"
-                : statusChance > 0.33 ? "complicated" : "single"
-    };
-};
-
-
-function makeData(len = 5553) {
-    return range(len).map(d => {
-        return {
-            ...newPerson(),
-            children: range(10).map(newPerson)
-        };
-    });
-}
+import {makeData} from "./make-data-dummy";
 
 const rawData = makeData();
 
+const styles = (props, theme) => ({
+    root: {
+        boxShadow: theme.boxShadow.table,
+        background: theme.palette.background.paper,
+        // border: "1px solid black",
+        "& .ReactTable": {
+            width: "100%",
+            fontSize: theme.text.size.table,
+            border: "none",
+            "& .rt-thead": {
+                boxShadow: theme.boxShadow.table_header,
+                color: theme.text.color.table_header,
+                maxHeight: 60,
+                minHeight: 60
+            },
+            "& .rt-tr-group":{
+                boxShadow: theme.boxShadow.table_header,
+                maxHeight: 60,
+                minHeight: 60,
+                color: theme.text.color.table_body
+            },
+            "& .rt-th": {
+                textAlign: "left",
+                borderRight: "none",
+                paddingLeft: theme.padding.table_content,
+                display: "flex",
+                alignItems: "center",
+            },
+            "& .rt-td": {
+                borderRight: "none",
+                textAlign: "left",
+                paddingLeft: theme.padding.table_content,
+                display: "flex",
+                alignItems: "center"
+            }
+        }
+    }
+});
 
-const requestData = async ({fetchApi = "https://jsonplaceholder.typicode.com/", pageSize, page, sorted, filtered}) => {
+const requestData = async ({fetchApi, pageSize, page, sorted, filtered, filterOptions}) => {
     console.log("pageSize", pageSize);
     console.log("page", page);
     console.log("sorted", sorted);
     console.log("filtered", filtered);
 
-    const response  = await axios(fetchApi);
+    const response = await axios(fetchApi);
     console.log('response', response)
 
 
@@ -109,7 +101,7 @@ const requestData = async ({fetchApi = "https://jsonplaceholder.typicode.com/", 
 };
 
 
-function Table({fetchApi}) {
+function Table({fetchApi, columns, defaultPageSize = 5, filterOptions, classes}) {
     const [data, setData] = useState([]);
     const [pages, setPages] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -121,7 +113,8 @@ function Table({fetchApi}) {
             pageSize,
             sorted,
             filtered,
-            fetchApi
+            fetchApi,
+            filterOptions
         }).then(res => {
             // Now just get the rows of data to your React Table (and update anything else like total pages or loading)
             setData(res.rows);
@@ -130,20 +123,29 @@ function Table({fetchApi}) {
         });
     };
 
-    return <ReactTable
-        PaginationComponent={Pagination}
-        manual // Forces table not to paginate or sort automatically, so we can handle it server-side
-        data={data}
-        pages={pages} // Display the total number of pages
-        loading={loading} // Display the loading overlay when we need it
-        loadingText={<span>Loading Icon</span>}
-        onFetchData={fetchData} // Request new data when things change
-        defaultPageSize={5}
-        className="-striped -highlight"
-        columns={columns}
-    />
+    return <Grid container className={classes.root}>
+        <ReactTable
+            PaginationComponent={Pagination}
+            manual // Forces table not to paginate or sort automatically, so we can handle it server-side
+            data={data}
+            pages={pages} // Display the total number of pages
+            loading={loading} // Display the loading overlay when we need it
+            loadingText={<span>Loading Icon</span>}
+            onFetchData={fetchData} // Request new data when things change
+            defaultPageSize={defaultPageSize}
+            columns={columns}
+        />
+    </Grid>
+
+
 }
 
-Table.propTypes = {};
+Table.propTypes = {
+    fetchApi: PropTypes.string,
+    columns: PropTypes.array,
+    defaultPageSize: PropTypes.number,
+    filterOptions: PropTypes.object,
+    classes: PropTypes.object.isRequired
+};
 
 export default withPropsStyles(styles)(Table);

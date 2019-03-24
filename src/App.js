@@ -25,9 +25,10 @@ import {
     MenuItem,
     AppBar,
     Tabs,
-    Tab,
-    Table
+    Tab
 } from "./ui-components";
+
+import Table from "./components/tables/user";
 
 function App({actions, selectedTheme}) {
     /**
@@ -75,9 +76,9 @@ function App({actions, selectedTheme}) {
 
 
     return (
-        <Grid container className="App" style={{marginBottom: 50}}>
+        <Grid container className="App" style={{marginBottom: 50, padding: 20}}>
             <MuiThemeProvider theme={theme}>
-                <Grid container spacing={16} direction={"column"}>
+                <Grid container direction={"column"}>
                     <Grid item container spacing={8}>
                         <Grid item>
                             <Button style={{background: green[500], color: "white"}}
@@ -309,7 +310,7 @@ function App({actions, selectedTheme}) {
                         </Grid>
                     </Grid>
 
-                    <Grid item>
+                    <Grid item container>
                         <h2>AppBar</h2>
                         <AppBar />
                     </Grid>
@@ -341,9 +342,7 @@ function App({actions, selectedTheme}) {
 
                     <Grid item>
                         <h2>Table</h2>
-                        <Table
-
-                        />
+                        <Table />
                     </Grid>
 
                     <ModalConfirm

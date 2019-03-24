@@ -6,7 +6,8 @@
         "paths": {
         "Config/*": ["src/config/*"],
             "components/*": ["src/components/*"],
-            "assets/*": ["src/assets/*"],
+            "ui-components/*": ["src/ui-components"],
+            "assets/*": ["src/assets/*"]
     }
 },
     "exclude": ["node_modules", "dist"]

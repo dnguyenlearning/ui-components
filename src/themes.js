@@ -62,6 +62,8 @@ const defaultStyleOptions = {
 
             menu_item_label: 12,
 
+            table: 16,
+
         },
         color: {
             modal_body: "#666666",
@@ -69,15 +71,15 @@ const defaultStyleOptions = {
             information_body_highlight: "#672165",
             information_header: "#808184",
             information_body: "#808184",
-            upload_zone: "#a1adcd"
+            upload_zone: "#a1adcd",
+            table_header: "#94979b",
+            table_body: "#52575a",
         },
         letterSpacing: {
 
         },
         font: {
-            bold: {
-                fontFamily: "helvetica-bold"
-            },
+            bold: "helvetica-bold"
         }
     },
     margin: {
@@ -87,13 +89,16 @@ const defaultStyleOptions = {
         table_item_hover: "0 13px 23px -5px rgba(157, 142, 230, 0.34)",
         notification: "0 2px 4px 0 rgba(0, 0, 0, 0.1)",
         tag: "0 5px 16px 0 rgba(226, 230, 245, 0.8)",
-        app_bar: "0 2px 40px 1px rgba(221, 229, 252, 0.5)"
+        app_bar: "0 2px 40px 1px rgba(221, 229, 252, 0.5)",
+        table: "-10px 9px 21px 0 rgba(128, 152, 213, 0.08)",
+        table_header: "0 1px 0 0 rgba(0, 0, 0, 0.06)",
     },
     gradient: {
 
     },
     padding: {
-        modal_control: "36px !important"
+        modal_control: "36px !important",
+        table_content: 20
     }
 };
 
