@@ -32,7 +32,11 @@ const styles = (props, theme) => ({
                 boxShadow: theme.boxShadow.table_header,
                 maxHeight: 60,
                 minHeight: 60,
-                color: theme.text.color.table_body
+                color: theme.text.color.table_body,
+                "&:hover": {
+                    boxShadow: theme.boxShadow.table_item_hover,
+                    border: " solid 1px #b9b3e2"
+                }
             },
             "& .rt-th": {
                 textAlign: "left",
