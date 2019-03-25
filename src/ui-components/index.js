@@ -11,6 +11,7 @@ import Tabs from "./tabs";
 import Tab from "./tabs/tab";
 import Table from "./table";
 import GalleryItem from "./gallery/item";
+import Mark from "./mark";
 
 export {
     QWButton,
@@ -25,5 +26,6 @@ export {
     Tab,
     Tabs,
     Table,
-    GalleryItem
+    GalleryItem,
+    Mark
 }

@@ -26,7 +26,8 @@ import {
     AppBar,
     Tabs,
     Tab,
-    GalleryItem
+    GalleryItem,
+    Mark
 } from "./ui-components";
 
 import Table from "./components/tables/user";
@@ -393,6 +394,24 @@ function App({actions, selectedTheme}) {
                                     handleShare={shareImageHandler}
                                 />
                             </Grid>
+                            <Grid item>
+                                <GalleryItem
+                                    item={{
+                                        src: "https://cdn.pixabay.com/photo/2018/02/04/17/11/venice-3130323_1280.jpg",
+                                        title: "Image Title"
+                                    }}
+                                    handleDownload={downloadImageHandler}
+                                    handleRemove={removeImageHandler}
+                                    handleShare={shareImageHandler}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Grid item>
+                        <h2>Mark</h2>
+                        <Grid container>
+                            <Mark />
                         </Grid>
                     </Grid>
                     <ModalConfirm
