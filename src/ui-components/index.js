@@ -10,6 +10,7 @@ import AppBar from "./app-bar";
 import Tabs from "./tabs";
 import Tab from "./tabs/tab";
 import Table from "./table";
+import GalleryItem from "./gallery/item";
 
 export {
     QWButton,
@@ -23,5 +24,6 @@ export {
     AppBar,
     Tab,
     Tabs,
-    Table
+    Table,
+    GalleryItem
 }

@@ -25,7 +25,8 @@ import {
     MenuItem,
     AppBar,
     Tabs,
-    Tab
+    Tab,
+    GalleryItem
 } from "./ui-components";
 
 import Table from "./components/tables/user";
@@ -70,6 +71,22 @@ function App({actions, selectedTheme}) {
      */
 
     const [tabIndex, setTabIndex] = useState(0);
+
+    /**
+     * Gallery State
+     */
+
+    const downloadImageHandler = (item) => {
+        console.log('download Image ', item.src)
+    };
+
+    const shareImageHandler = (item) => {
+        console.log('share Image ', item.src)
+    };
+
+    const removeImageHandler = (item) => {
+        console.log('remove Image ', item.src)
+    };
 
 
     const theme = createTheme(selectedTheme);
@@ -212,20 +229,26 @@ function App({actions, selectedTheme}) {
                             <Grid item>
                                 <Tag
                                     label={"Normal Tag"}
-                                    handleDelete={()=>{console.log('delete')}}
+                                    handleDelete={() => {
+                                        console.log('delete')
+                                    }}
                                 />
                             </Grid>
                             <Grid item>
                                 <Tag
                                     type={"active"}
                                     label={"Active Tag"}
-                                    handleDelete={()=>{console.log('delete')}}
+                                    handleDelete={() => {
+                                        console.log('delete')
+                                    }}
                                 />
                             </Grid>
                             <Grid item>
                                 <Tag
                                     label={"Other Tag"}
-                                    handleDelete={()=>{console.log('delete')}}
+                                    handleDelete={() => {
+                                        console.log('delete')
+                                    }}
                                 />
                             </Grid>
                         </Grid>
@@ -234,7 +257,7 @@ function App({actions, selectedTheme}) {
                     <Grid item>
                         <h2>Upload Zone</h2>
                         <UploadZone
-                            handleAcceptedFile={(acceptedFiles)=> console.log(acceptedFiles)}
+                            handleAcceptedFile={(acceptedFiles) => console.log(acceptedFiles)}
                         />
                     </Grid>
 
@@ -244,7 +267,7 @@ function App({actions, selectedTheme}) {
                             <h4>Normal Input</h4>
                             <InputText
                                 placeholder={"placeholder"}
-                                handleChange={(value)=> console.log('value', value)}
+                                handleChange={(value) => console.log('value', value)}
                             />
                         </Grid>
                         <Grid item>
@@ -252,7 +275,7 @@ function App({actions, selectedTheme}) {
                             <InputText
                                 error={true}
                                 placeholder={"placeholder"}
-                                handleChange={(value)=> console.log('value', value)}
+                                handleChange={(value) => console.log('value', value)}
                             />
                         </Grid>
                         <Grid item>
@@ -260,7 +283,7 @@ function App({actions, selectedTheme}) {
                             <InputText
                                 success={true}
                                 placeholder={"placeholder"}
-                                handleChange={(value)=> console.log('value', value)}
+                                handleChange={(value) => console.log('value', value)}
                             />
                         </Grid>
                     </Grid>
@@ -312,14 +335,14 @@ function App({actions, selectedTheme}) {
 
                     <Grid item container>
                         <h2>AppBar</h2>
-                        <AppBar />
+                        <AppBar/>
                     </Grid>
 
                     <Grid item>
                         <h2>Tabs</h2>
                         <Tabs
                             value={tabIndex}
-                            onChange = {(e,v) => setTabIndex(v)}
+                            onChange={(e, v) => setTabIndex(v)}
                         >
                             <Tab
                                 label={"Tab 1"}
@@ -342,9 +365,36 @@ function App({actions, selectedTheme}) {
 
                     <Grid item>
                         <h2>Table</h2>
-                        <Table />
+                        <Table/>
                     </Grid>
 
+                    <Grid item>
+                        <h2>Gallery</h2>
+                        <Grid container spacing={16}>
+                            <Grid item>
+                                <GalleryItem
+                                    item={{
+                                        src: "https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg",
+                                        title: "Image Title"
+                                    }}
+                                    handleDownload={downloadImageHandler}
+                                    handleRemove={removeImageHandler}
+                                    handleShare={shareImageHandler}
+                                />
+                            </Grid>
+                            <Grid item>
+                                <GalleryItem
+                                    item={{
+                                        src: "https://cdn.pixabay.com/photo/2013/05/28/20/30/city-114290_1280.jpg",
+                                        title: "Image Title"
+                                    }}
+                                    handleDownload={downloadImageHandler}
+                                    handleRemove={removeImageHandler}
+                                    handleShare={shareImageHandler}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
                     <ModalConfirm
                         open={openModalConfirm}
                         handleClose={closeModalConfirmHandler}
@@ -365,7 +415,8 @@ function App({actions, selectedTheme}) {
                 </Grid>
             </MuiThemeProvider>
         </Grid>
-    );
+    )
+        ;
 }
 
 export default App;

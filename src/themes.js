@@ -63,6 +63,10 @@ const defaultStyleOptions = {
             menu_item_label: 12,
 
             table: 16,
+            gallery_description: 18,
+            gallery_text_icon: 9,
+            gallery_text_preview_content: 14,
+            gallery_text_preview_header: 22,
 
         },
         color: {
